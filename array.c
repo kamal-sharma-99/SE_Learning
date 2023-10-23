@@ -11,6 +11,7 @@ void main()
 		gets(name);
 		printf("enter your age\n");
 		scanf("%d",&age);
+		fflush(stdin);
 		printf("enter your city\n");
 //		scanf("%s",&city);
 		gets(city);
