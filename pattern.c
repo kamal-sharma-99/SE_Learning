@@ -78,15 +78,34 @@ int main(){
 //		}
 //		printf("\n");
 //		}
+//
+//12345*
+//1234***
+//123*****
+//12*******
+//int j=1;
+//for(int i=5;i>=0;i--){
+//	for(j=1;j<=i;j++){
+//		printf(" ");
+//	}
+//	for(int k=5;k>=j;k--){
+//		printf("*");
+//		
+//	}
+//		printf("\n");
+//	
+//}
 
 
+
+//
 int j=1;
-		for(int i=5;i>0;i--){
+		for(int i=15;i>0;i--){
 		for(j=1;j<=i-1;j++){
 //			printf(" 1 ");
 			printf(" ");
 		}
-		for(int l=5;l>=j;l--){
+		for(int l=15;l>=j;l--){
 		printf(" *");
 		}
 		printf("\n");
@@ -98,7 +117,7 @@ int j=1;
 //			printf(" 1 ");
 			printf(" ");
 		}
-		for(int l=4;l>=j;l--){
+		for(int l=14;l>=j;l--){
 		printf(" *");
 		}
 		printf("\n");
