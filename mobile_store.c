@@ -11,38 +11,45 @@
 	}
 	
 //	------------------------------------------------------------------------------------------------------
+
 	
-	int storage(sp1,sp2){
+	int storage(sp1,sp2,rs){
 		printf("Choose storage capacity for your device\n");
-		printf("Type 1 for 128GB variant\n");
-		printf("Type 2 for 256GB variant\n");
+		printf("Type 128 for 128GB variant\n");
+		printf("Type 256 for 256GB variant\n");
 		scanf("%d",&storagec);
 		
-		if(storagec==1){
-		printf("You choose Iphone 15 with 128GB storage\n");
+		if(storagec==128){
+		printf("You choose Iphone 15 with %dGB storage\n",storagec);
 		printf("Price of your Iphone 15 with 128GB storage is %d\n",sp1);
+		sp1 = rs;
 		}
-		else if(storagec==2){
-		printf("You choose Iphone 15 with 256GB storage\n");
+		else if(storagec==256){
+		printf("You choose Iphone 15 with %dGB storage\n",storagec);
 		printf("Price of your Iphone 15 with 256GB storage is %d\n",sp2);
+		sp1 = rs;
 		}
 	}
 	
 //	-------------------------------------------------------------------------------------------------------
 	
 	int color(){
+	char mc1[] = "Rose Gold";
+	char mc2[] = "Midnight Black";
 		printf("Choose color for your device\n");
 		printf("Type 1 for Rose Gold\n");
 		printf("Type 2 for Midnight Black\n");
 		
-		scanf("%d",&clr);
+		scanf("%s",&clr);
 		
-		if(clr==1){
-		printf("You choose Rose Gold \n");
+		if(clr=='rg'){
+//		printf("You choose Rose Gold \n");
+		printf("You choose %s \n",mc1);
+		
 		}
-		else if(clr==2){
-		printf("You choose Midnight Black \n");
-		
+		else if(clr=='mb'){
+		printf("You choose %s \n",mc2);
+	
 		}
 	}
 	
@@ -92,7 +99,12 @@
 	}
 	
 //	---------------------------------------------------------------------------------------------------------------------
+
 int apple(){
+char mod1[]= "Iphone 15";
+char mod2[]= "Iphone 15 pro";
+char mod3[]= "Iphone 15 pro max";
+	
 		printf("Choose your model\n");
 		printf("Type 1 for Iphone 15\n");
 		printf("Type 2 for Iphone 15 pro\n");
@@ -103,28 +115,33 @@ int apple(){
 		printf("You choose Iphone 15\n");
 		storage(99,199);
 		color();
-		addcart();
-		payment();
+		ov(mod1,storagec,clr);
+		amount(249);
+//		addcart();
+//		payment();
 		}
 		else if(model==2){
 		printf("You choose Iphone 15 pro\n");
-		storage();
-		color();
+//		storage();
+//		color();
 		}
 		else if(model==3){
 		printf("You choose Iphone 15 pro max\n");
-		storage();
-		color();
+//		storage();
+//		color();
 		}
 	}
 //------------------------------------------------------------------------------------------------------------------------
+char brand_i[] = "Apple";
+char brand_s[] = "Samsung";
+
+
 
 int brandfunc(){
 		printf("Welcome to our Mobile World\n");
 		printf("What type of brand you are looking for?\n");
 		printf("Type 1 for Apple \n");
 		printf("Type 2 for Samsung \n");
-		printf("Type 3 for Oppo \n");
 		scanf("%d",&brand);
 	
 		if(brand==1){
@@ -133,9 +150,7 @@ int brandfunc(){
 		}
 		else if(brand==2){
 			printf("you choose Samsung \n");
-		}
-		else if(brand==3){
-			printf("you choose Oppo \n");
+//			samsung();
 		}
 		else{
 			printf("You choose nothing \n");
@@ -143,13 +158,23 @@ int brandfunc(){
 	}
 
 //------------------------------------------------------------------------------------------------------------------------
-int ov(){
+int ov(mod1,storagec,clr,am){
 		printf("Product details\n");
-		printf("Model : %s \n");
-		printf("Storage : %dGB\n");
-		printf("Color : %s\n");
-		printf("Price : %d\n");		
+		
+		printf("Model : %s\n",mod1);
+		printf("Storage : %dGB\n",storagec);
+		printf("Color : %s\n",clr);
+		amount();
+		
+		
 	}
+//------------------------------------------------------------------------------------------------------------------------
+
+int amount(am){
+	printf("Price of your device is  : %d \n",am);
+}
+
+
 //------------------------------------------------------------------------------------------------------------------------
 
 
